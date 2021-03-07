@@ -1,8 +1,10 @@
-package org.example.services;
+package org.example.useCases.commands;
 
-public class CommandServiceImpl implements CommandService {
+/***
+ * This class will be used for listing the possible commands
+ */
+public class CommandsListing {
 
-    @Override
     public String listAllCommands() {
         return getTemplateCommandHelper("help", "list all the possible commands");
     }
@@ -10,4 +12,5 @@ public class CommandServiceImpl implements CommandService {
     private String getTemplateCommandHelper(final String command, final String description) {
         return String.format("%s      %s", command, description);
     }
+
 }
